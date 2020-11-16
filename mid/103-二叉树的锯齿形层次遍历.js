@@ -13,8 +13,8 @@ function zigzagLevelOrder(root) {
       node.left && queue.push(node.left);
       node.right && queue.push(node.right);
     }
+    level % 2 && res[level].reverse();
     level++;
-    if (level % 2) res[level].reverse();
   }
   return res;
 }
